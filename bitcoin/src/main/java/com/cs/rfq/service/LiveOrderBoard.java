@@ -5,8 +5,14 @@ import com.cs.rfq.model.Order;
 import java.util.List;
 
 /**
- * Created by ssinghbi02 on 24/05/2016.
+ * Interface for Live client orders.
  */
 public interface LiveOrderBoard {
-    List<Order> ordersFor(String currency);
+
+    /**
+     *
+     * @param currency currency
+     * @return {@link Order}
+     */
+    List<Order> ordersFor(final String currency);
 }

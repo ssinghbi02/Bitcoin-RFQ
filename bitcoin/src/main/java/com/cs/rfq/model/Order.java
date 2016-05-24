@@ -3,7 +3,7 @@ package com.cs.rfq.model;
 import com.cs.rfq.model.Direction;
 
 /**
- * Created by ssinghbi02 on 24/05/2016.
+ * Model to represent live client order.
  */
 public class Order {
     private final Direction direction;

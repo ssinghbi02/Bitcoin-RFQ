@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
- * Created by ssinghbi02 on 24/05/2016.
+ * {@inheritDoc}
  */
 public class RfqServiceImpl implements RfqService {
 
@@ -22,6 +22,9 @@ public class RfqServiceImpl implements RfqService {
     }
 
     @Override
+    /**
+     * {@inheritDoc}
+     */
     public Optional<Quote> quoteFor(final String currency, final int amount) {
 
         List<Order> orders = liveOrderBoard.ordersFor(currency);
@@ -38,6 +41,13 @@ public class RfqServiceImpl implements RfqService {
         return Optional.of(quote);
     }
 
+    /**
+     *
+     * @param amount amount
+     * @param orders client orders
+     * @param direction buy/sell direction
+     * @return {@link Order}
+     */
     private Optional<Order> findMatchingClientOfferForDirection(int amount, List<Order> orders, Direction direction) {
 
         Comparator<Order> comparator = (o1, o2) ->

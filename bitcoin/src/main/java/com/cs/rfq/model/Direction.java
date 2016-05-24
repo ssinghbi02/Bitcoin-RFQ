@@ -1,7 +1,7 @@
 package com.cs.rfq.model;
 
 /**
- * Created by ssinghbi02 on 24/05/2016.
+ * Enum to represent direction of order buy/sell.
  */
 public enum Direction {
     BUY, SELL
